@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>introduce</title>
+<style type="text/css">
+*{
+	margin:0 auto;}
+.bod{width:800px;height:800px;background:#99cc99;}
+.bb{width:800px;height:36px;background:#ffcc00;text-align:center;}
+.ap{  	/*标题属性*/
+	font-famliy:"微软雅黑";font-size:24px;font-weight:bold;}
+.Intro{
+	width:500px;
+	height:700px;
+	background-color:#CCC;
+	float:left;
+	position:relative;
+	
+	top:30px;
+	}
+	a{
+	text-decoration:none;}
+.DownL{
+	width:300px;
+	height:700px;
+	background-color:#000;
+	float:right;
+	position:relative;
+	
+	top:30px;}
+</style>
+</head>
+
+<body>
+<div class="bod">
+<div class="bb"><p class="ap"> A 8086 PC emulator (Pure VB6)</p></div>
+    <div class="Intro" style="text-align:center;">
+    <h1> A 8086 PC emulator (Pure VB6)</h1>
+    <p style=" font-size:18px;"> 
+    <br /> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; called vb8086. So basically, this emulator supports the basics of the old 8086 style PC hardware platforms. The CPU instructions are totally emulated, minus the bug I mentioned. The i8253 timer chip is emulated, as well as the i8259 interrupt controller. Disk functionality is emulated for both floppy and hard drives through interrupt 13h calls. Many games run very well in it right now, but some are crippled by the IMUL/IDIV bug. One in particular that runs awesomely is Ultima 6. I've beaten the whole game inside my emulator without any issues. Ms Pacman runs well too, and a lot of other older ones. The PC speaker is emulated kind of poorly, but it's there. As far as video emulation support, it supports the CGA video and text modes, as well as 320x200 8-bit VGA/MCGA mode. So, I'm providing all of the source code as well as a few data files with the font and BIOS. I didn't include the .EXE to comply with the forum rules, but you can easily compile it yourself. Just load the vb8086.vbp file and compile. If you get any errors compiling or running, run the resreg.bat file with will register dx8vb.dll and comdlg32.ocx with Windows and try again. I also included a blank 20 MB hard drive image to use in the emulator with the bare files for booting DOS 6.22.
+    </div>
+    <div class="DownL"><a href="../Source/A 8086 PC emulator (Pure VB6).zip">
+    <input type="button" value="源码下载" style="width:200px; height:50px; background-color:#900; font-size:36px; position:relative;
+    top:200px; left:50px;" /></a>
+    </div>
+   
+</div>
+</body>
+</html>

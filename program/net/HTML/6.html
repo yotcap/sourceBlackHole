@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>introduce</title>
+<style type="text/css">
+*{
+	margin:0 auto;}
+.bod{width:800px;height:800px;background:#99cc99;}
+.bb{width:800px;height:36px;background:#ffcc00;text-align:center;}
+.ap{  	/*标题属性*/
+	font-famliy:"微软雅黑";font-size:24px;font-weight:bold;}
+.Intro{
+	width:500px;
+	height:700px;
+	background-color:#CCC;
+	float:left;
+	position:relative;
+	
+	top:30px;
+	}
+	a{
+	text-decoration:none;}
+.DownL{
+	width:300px;
+	height:700px;
+	background-color:#000;
+	float:right;
+	position:relative;
+	
+	top:30px;}
+</style>
+</head>
+
+<body>
+<div class="bod">
+	<div class="bb"><p class="ap">A Fancy Form Closer (updated)</p></div>
+    <div class="Intro" style="text-align:center;">
+    <h1>A Fancy Form Closer (updated)</h1>
+    <p style=" font-size:18px;">   <br /> <br />     This code is an update from the original post. It contains 9 ways to close a form other than just having it disappear by fading, shrinking 4 ways or running off the screen in 4 ways. Many more are possible but would take more time. If you have an addition, please send it and I will credit you and add it to the collection. The demo form is a program and Windows uptime display updated each 2 second. The bulk of the work is done in a module with only minimal coding needed in the form to make it easy to retrofit into an existing form and easy to implement in a new form. Installing it mostly requires putting a me.close in each control that should allow the form to close. A timer is needed, set to 15 ms. and one line of code in the timer.tick to redirect execution to the timer code in the module. If you have a button to close, then this takes only one modification. For a form that accepts a click anywhere, it will take putting me.close in each control that is visible's clicked event. Slightly more work but allows a "click anywhere to close" form saving a close button. This uptime example is one of those (with no close button). The other small change are to add some code in me.closing to intercept and temporarily stop the close and to add a timer and direct it to the operative code in the module.
+ </p>
+    
+    
+    </div>
+    <div class="DownL">
+    <a href="../Source/A Fancy Form Closer (updated).zip"><input type="button" value="源码下载" style="width:200px; height:50px; background-color:#900; font-size:36px; position:relative;
+    top:200px; left:50px;" /></a>
+    </div>
+   
+</div>
+</body>
+</html>

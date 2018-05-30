@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>shiyan</title>
+</head>
+<style>    
+*{ margin:0 auto; padding:0px; list-style:none;}    
+#box{ width:900px; height:150px; position:relative;
+
+ overflow:hidden;}    
+#box ul{ position:absolute; left:0; top:0;}    
+#box ul li{ width:900px; height:150px; float:left;}    
+</style>    
+<script>  
+  
+window.onload=function(){    
+	var oBox=document.getElementById('box');    
+	var oUl=oBox.children[0];    
+	var aLi=oUl.children;    
+	//复制一份内容    
+	oUl.innerHTML+=oUl.innerHTML;    
+	oUl.style.width=aLi.length*aLi[0].offsetWidth+'px';    
+	setInterval(function(){    
+		var l=oUl.offsetLeft-5;    
+		if(l<=-oUl.offsetWidth/2){    
+			l=0;    
+		}    
+		oUl.style.left=l+'px';    
+	},30);    
+};    
+</script>    
+
+</body>
+<body>
+  
+<div id="box">
+	<ul>
+    	<li><img src="images/index1.jpg"  /></li>
+        <li><img src="images/index2.jpg"/></li>
+        <li><img src="images/index3.jpg" /></li>
+        <li><img src="images/index4.jpg" /></li>
+        <li><img src="images/index5.jpg" /></li>
+        
+    </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,533 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb18030">	
+<meta content="0zqEWmEKBo" name="baidu-site-verification" />
+<meta name="description" content="" /><!--描述 --> 
+<title>SourceBlackHole</title>
+<link href="css/CSSA.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="css/login.css"  />
+<script language="JavaScript" src="js/login.js"></script>
+<style type="text/css">
+td{	color:#CCC;}  /*表格*/
+a{
+	font-size:16px;
+	text-decoration:none;
+	color:#CCC;
+}
+a:hover{
+	font-size:16.5px;
+	color:#FFF;	
+	}
+.table_boxR{position:relative;top:0px;}	
+.table_boxR a{
+	font-size:16px;
+	text-decoration:none;
+	color:#333;
+}
+.table_boxR a:hover{
+	font-size:16.5px;
+	color:#FFF;	
+	}
+	</style>
+	<base target="_blank" />
+</head>
+<body class="body">
+<div>
+<div class="body1"><!-- 主身体 body1-->
+   <!--login -->
+	<div  class="d1" id="d_1">
+    	<div class="head">登录<div style="float:right;padding:5px; line-height:5px;"><input id="btn_close" type="button" value="  X  " onclick="btn_close()" style=" height:20px; width:25px;"/></div></div>
+        <div>
+        	<div class="input_form">
+            	<br />
+                <form >
+            	<ul>
+                	<li>账号：<input id="user" type="text"  placeholder="输入账号" class="inputf" style="ime-mode:disabled" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')"/><a onclick="javascript:open_register('450','400');return flase;" target="_self" href="#" style="padding-left:15px;text-decoration:none;font-size:14px;">立即注册</a></li>
+                    <br />
+                    <li>密码：<input type="password" placeholder="密码" class="inputf" onclick="Juge()"  maxLength="15"/><a href="#" style="font-size:14px;padding-left:15px;text-decoration:none;">忘记密码？</a></li>
+                </ul>
+                <ul style="margin:35px 0px;padding:0px 0px 0px 60%;">
+                	<li>
+                		<input type="submit" value="登录" class="btn_reg btn_white" target="_self" />
+                	</li>
+                </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--遮罩层 -->
+    <div id="div1"></div>   
+     <!--register -->  
+    <div class="d_register" id="d_registeri">
+    	<div class="head">注册<div style="float:right;padding:5px; line-height:5px;"><input id="btn_close" type="button" value="  X  " onclick="btn_close()" style=" height:20px; width:25px;" /></div></div>
+        <div class="input_form_reg">
+        	<form>
+            	<ul>
+                	<li class="reg_name">注册邮箱：</li>
+                    <li class="reg_text">
+                    	<div class="hide_tip" id="hide_tipi0">
+                    		<p>&nbsp;仅限英文字符<br />&nbsp;不少于6个字符</p>
+                        </div>
+                        <input id="judge_email" type="text" placeholder="请输入正确的email地址" style="float:left" onBlur="reg_tip_error0s();"/>
+                        <div class="hide_tip_error" id="hide_tipi_error0">
+                    		<p>&nbsp;地址错误</p>
+                        </div>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                <ul>    
+                	<li class="reg_name">用户名：</li>
+                    <li class="reg_text">
+                        <input id="jude_user" type="text" onFocus="reg_tip_show();" onBlur="reg_tip_hide();reg_tip_error1s()" style="float:left" onkeyup="value=value.replace(/[^\w\.\/]/ig,'')" />
+                        <div class="hide_tip_error" id="hide_tipi_error1">
+                    		<p>&nbsp;长度过短</p>
+                        </div>
+                        <div class="hide_tip_error" id="hide_tipi_error1_1">
+                    		<p>&nbsp;长度过长</p>
+                        </div>
+                        <div class="clear"></div>
+                    	<div class="hide_tip" id="hide_tipi">
+                    		<p>不少于6个字符&nbsp;&nbsp;仅限数字英文</p>
+                        </div>
+                    </li>
+                 </ul>
+                 <div class="clear"></div>
+                 <ul>
+                 	<li class="reg_name">密码：</li>
+                    <li class="reg_text">
+                    	<input id="jude_paw" type="text" onFocus="reg_tip_show1()" onBlur="reg_tip_hide1();reg_tip_error2s();reg_tip_error3s();" style="float:left" />
+                    	<div class="hide_tip_error" id="hide_tipi_error2">
+                    		<p>&nbsp;过于简单</p>
+                    	</div>
+                    	<div class="clear"></div>
+                    	<div class="hide_tip" id="hide_tipi1">
+                    		<p>不少于6个字符</p>
+                    	</div>
+                    </li>
+                 </ul>
+                 <div class="clear"></div>
+                 <ul>
+                 	<li class="reg_name">确认密码：</li>
+                    <li class="reg_text">
+                    	<input id="jude_paw1" type="text"  onBlur="reg_tip_error3s();reg_tip_hide2();"  style="float:left" />
+                        <div  class="hide_tip_error" id="hide_tipi_error3">
+                                <p>&nbsp;密码不一致</p>
+                        </div>
+                    </li>
+                 </ul>
+                <div class="clear"></div>
+                <ul style="margin:45px 0px;padding:0px 0px 0px 50%;">
+                	<li>
+                		<input type="submit" value="Now" class="btn_reg btn_white"  target="_self" />
+                	</li>
+                </ul>
+            </form>
+        </div>
+    </div>
+    <!--左身体 -->
+<div class="bodyl">
+<div class="logo"><a href="index.html"><img class="logo" src="pic/logol.jpg" /></a></div>
+
+<div id="s1">
+<ul class="menu">
+	<li><a href="htm/c.html">C/C++</a></li>
+	<li><a href="htm/VB.html">VB</a></li>
+	<li><a href="htm/Java.html">Java</a></li>
+	<li><a href="htm/Android.html">Android</a></li>
+	<li><a href="htm/Python.html">Python</a></li>
+	<li><a href="#">Others</a>
+	<ul>
+		<li><a href="#" onclick="open_1('250','350');return flase;"  target="_self">登&nbsp;陆</a></li>
+		<li><a href="#" onclick="open_register('450','400');return flase;" target="_self">注&nbsp;册</a></li>
+		<li><a href="#" onclick="alert('暂未开通!')" target="_self">论&nbsp;坛</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="tableC"><!--C/C++ -->
+<div class="tip"><a href="htm/c.html">C/C++</a></div>
+
+<div class="table_box">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/C++/HTML/1.html" target="_blank">&nbsp;&nbsp;&nbsp;1. Elite Converter</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/C++/HTML/2.html" target="_blank">&nbsp;&nbsp;&nbsp;2. 绘图仪线接口</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/C++/HTML/3.html" target="_blank">&nbsp;&nbsp;&nbsp;3. A Simple DOS Calculator</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/C++/HTML/4.html" target="_blank">&nbsp;&nbsp;&nbsp;4. Tally program</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/C++/HTML/5.html" target="_blank">&nbsp;&nbsp;&nbsp;5. HexDecOctBin转换</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/C++/HTML/6.html" target="_blank">&nbsp;&nbsp;&nbsp;6. 3D Demonstration</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/C++/HTML/7.html" target="_blank">&nbsp;&nbsp;&nbsp;7. Media Player</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableC">
+<div class="tip"><a href="htm/VB.html">VB</a></div>
+<!--VB-->
+
+<div class="table_box">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/VB/HTML/1.html">&nbsp;&nbsp;&nbsp;1. Screen Saver</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/VB/HTML/2.html">&nbsp;&nbsp;&nbsp;2. [ A- BioRRitm ]</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/VB/HTML/3.html">&nbsp;&nbsp;&nbsp;3. Digital Clock</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/VB/HTML/4.html">&nbsp;&nbsp;&nbsp;4. LCD Clock </a></td>
+		</tr>
+		<tr>
+			<td><a href="program/VB/HTML/5.html">&nbsp;&nbsp;&nbsp;5. Artificial Intelligence</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/VB/HTML/6.html">&nbsp;&nbsp;&nbsp;6. Color Code</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/VB/HTML/7.html">&nbsp;&nbsp;&nbsp;7. code Editor</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableC">
+<div class="tip"><a href="htm/Java.html">Java</a></div>
+
+<div class="table_box">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/Java/HTML/3.html" target="_blank">&nbsp;&nbsp;&nbsp;1. J2EE企业级开源框架bboss</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Java/HTML/4.html" target="_blank">&nbsp;&nbsp;&nbsp;2. 云通付支付系统(JAVA版)</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Java/HTML/5.html" target="_blank">&nbsp;&nbsp;&nbsp;3. 企业建站系统MiinCMP</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Java/HTML/6.html" target="_blank">&nbsp;&nbsp;&nbsp;4. 51javacms CMS系统</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Java/HTML/7.html" target="_blank">&nbsp;&nbsp;&nbsp;5. Java经典小程序</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Java/HTML/8.html" target="_blank">&nbsp;&nbsp;&nbsp;6. java案例精粹150例</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Java/HTML/9.html" target="_blank">&nbsp;&nbsp;&nbsp;7. Java网络爬虫(蜘蛛)源码</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableC">
+<div class="tip"><a href="htm/Android.html">Android</a></div>
+
+<div class="table_box">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/android/HTML/5.html" target="_blank">&nbsp;&nbsp;&nbsp;1. 仿QQ菜单</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/android/HTML/6.html" target="_blank">&nbsp;&nbsp;&nbsp;2. 加载框效果</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/android/HTML/7.html" target="_blank">&nbsp;&nbsp;&nbsp;3. 仿贴吧应用的Fragment</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/android/HTML/8.html" target="_blank">&nbsp;&nbsp;&nbsp;4. 蓝牙聊天通讯(含注释)</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/android/HTML/9.html" target="_blank">&nbsp;&nbsp;&nbsp;5. 仿制PhotoShop调色板</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/android/HTML/10.html" target="_blank">&nbsp;&nbsp;&nbsp;6. 获取root权限静默安装</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/android/HTML/11.html" target="_blank">&nbsp;&nbsp;&nbsp;7. 支持多重小括号的计算器</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableC">
+<div class="tip"><a href="htm/Python.html">Python</a></div>
+
+<div class="table_box">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/Python/HTML/51.html" target="_blank">&nbsp;&nbsp;&nbsp;1. 恢复整理修改过java包</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/52.html" target="_blank">&nbsp;&nbsp;&nbsp;2. 模拟经营的python小游戏</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/53.html" target="_blank">&nbsp;&nbsp;&nbsp;3. 求公约数和公倍数</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/55.html" target="_blank">&nbsp;&nbsp;&nbsp;4. 自动生成CMake脚本</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/56.html" target="_blank">&nbsp;&nbsp;&nbsp;5. 编写ini文件</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/57.html" target="_blank">&nbsp;&nbsp;&nbsp;6. 筛选特定宽度的图片</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/59.html" target="_blank">&nbsp;&nbsp;&nbsp;7. 简易的订餐系统</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableC">
+<div class="tip"><a href="htm/Others.html">Others</a></div>
+
+<div class="table_box">
+<table border="0" height="234px" width="500">
+	<tbody>
+		<tr>
+			<td style=" font-size:36px;">&nbsp;&nbsp;&nbsp;待开发区域</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="bodyr"><!--右身体 bodyr-->
+<div><a href="index.html"><img class="logor" src="pic/logor.jpg" /></a></div>
+
+<div id="s2">
+<ul class="menur">
+	<li><a href="htm/Phpweb.html">Php</a></li>
+	<li><a href="htm/Pythonweb.html">Pythonweb</a></li>
+	<li><a href="htm/Javaweb.html">Javaweb</a></li>
+	<li><a href="htm/net.html">.net</a></li>
+	<li><a href="htm/Asp.html">Asp</a></li>
+	<li><a href="#">Others</a>
+	<ul class="t_top">
+		<li><a href="#" onclick="alert('暂未开通!')" target="_self">站主展示</a></li>
+		<li><a href="#" onclick="alert('暂未开通!')" target="_self">作品鉴赏</a></li>
+		<li><a href="#" onclick="alert('暂未开通!')" target="_self">悬赏令</a></li>
+		<li><a href="#" onclick="alert('暂未开通!')" target="_self">求贤令</a></li>
+	</ul>
+	</li>
+</ul>
+</div>
+
+<div class="tableCr">
+<div class="tipr"><a href="htm/Phpweb.html">Php</a></div>
+
+<div class="table_boxR">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/Phpweb/HTML/1.html">&nbsp;&nbsp;&nbsp;1. send HTML Emails</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Phpweb/HTML/2.html">&nbsp;&nbsp;&nbsp;2. File Upload Program</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Phpweb/HTML/3.html">&nbsp;&nbsp;&nbsp;3. Modification Table</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Phpweb/HTML/4.html">&nbsp;&nbsp;&nbsp;4. File Uploader </a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Phpweb/HTML/5.html">&nbsp;&nbsp;&nbsp;5. Display Random Images</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Phpweb/HTML/6.html">&nbsp;&nbsp;&nbsp;6. Professional Forum</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Phpweb/HTML/7.html">&nbsp;&nbsp;&nbsp;7. Curriculum Vitae Maker</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableCr">
+<div class="tipr"><a href="htm/Pythonweb.html">Pythonweb</a></div>
+
+<div class="table_boxR">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/Pythonweb/HTML/70.html" target="_blank">&nbsp;&nbsp;&nbsp;1. 网站可用性、访问时间监控</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/17.html" target="_blank">&nbsp;&nbsp;&nbsp;2. python实现whois查询</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Pythonweb/HTML/77.html" target="_blank">&nbsp;&nbsp;&nbsp;3. 桌面显示天气信息</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/1.html" target="_blank">&nbsp;&nbsp;&nbsp;4. python方法检测UDP端口</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/5.html" target="_blank">&nbsp;&nbsp;&nbsp;5. 登陆163获取邮件和通讯录</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/6.html" target="_blank">&nbsp;&nbsp;&nbsp;6. Python实现Gmail发邮件</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Python/HTML/7.html" target="_blank">&nbsp;&nbsp;&nbsp;7. Gmail邮件发送Python</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableCr">
+<div class="tipr"><a href="htm/Javaweb.html">Javaweb</a></div>
+
+<div class="table_boxR">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/Javaweb/HTML/1.html" target="_blank">&nbsp;&nbsp;&nbsp;1. Jsp物流信息网源码</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Javaweb/HTML/2.html" target="_blank">&nbsp;&nbsp;&nbsp;2. 在线考试系统源码</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Javaweb/HTML/3.html" target="_blank">&nbsp;&nbsp;&nbsp;3. Jsp论坛系统(BBS)</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Javaweb/HTML/4.html" target="_blank">&nbsp;&nbsp;&nbsp;4. javaweb高级案例合集</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Javaweb/HTML/5.html" target="_blank">&nbsp;&nbsp;&nbsp;5. 网上购物系统</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Javaweb/HTML/6.html" target="_blank">&nbsp;&nbsp;&nbsp;6. 都市信息供求网源码</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Javaweb/HTML/7.html" target="_blank">&nbsp;&nbsp;&nbsp;7. 网上书店毕业设计</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableCr">
+<div class="tipr"><a href="htm/net.html">.net</a></div>
+
+<div class="table_boxR">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/net/HTML/1.html">&nbsp;&nbsp;&nbsp;1. Way To List Files In A Folder</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/net/HTML/2.html">&nbsp;&nbsp;&nbsp;2. Appointments</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/net/HTML/3.html">&nbsp;&nbsp;&nbsp;3. 1 on 1 chat with Some Functions</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/net/HTML/4.html">&nbsp;&nbsp;&nbsp;4. Desktop Wallpaper Manager</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/net/HTML/5.html">&nbsp;&nbsp;&nbsp;5. dictionary program</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/net/HTML/6.html">&nbsp;&nbsp;&nbsp;6. Fancy Form Close</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/net/HTML/7.html">&nbsp;&nbsp;&nbsp;7. Mail Sending Facility</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableCr">
+<div class="tipr"><a href="htm/Asp.html">Asp</a></div>
+
+<div class="table_boxR">
+<table border="0" height="210px" width="500">
+	<tbody>
+		<tr>
+			<td><a href="program/Asp/HTML/1.html">&nbsp;&nbsp;&nbsp;1. Online Examination</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Asp/HTML/2.html">&nbsp;&nbsp;&nbsp;2. Active Server Page Bulletin Board</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Asp/HTML/3.html">&nbsp;&nbsp;&nbsp;3. Stock-Quote lookup</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Asp/HTML/4.html">&nbsp;&nbsp;&nbsp;4. [League Table]</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Asp/HTML/5.html">&nbsp;&nbsp;&nbsp;5. [XML] Poll</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Asp/HTML/6.html">&nbsp;&nbsp;&nbsp;6. Complete Web Site</a></td>
+		</tr>
+		<tr>
+			<td><a href="program/Asp/HTML/7.html">&nbsp;&nbsp;&nbsp;7. complete Website ASP</a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+
+<div class="tableCr">
+<div class="tipr"><a href="htm/Othersr.html">Others</a></div>
+
+<div class="table_boxR">
+<table border="0" height="234px" width="500">
+	<tbody>
+		<tr>
+			<td style=" font-size:36px; color:#333">&nbsp;&nbsp;&nbsp;待开发区域</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div class="DD">
+<div id="Box"><img id="Swit" onmouseout="goon()" onmouseover="stop()" src="pic/index1.jpg" /></div>
+</div>
+<!--root-->
+
+<div style=" width:1200px; height:150px; border:0px; margin:0; overflow:hidden;"><iframe height="100%" scrolling="no" src="root.html" style=" border:0px; position:relative;
+            top:0px; padding:0; margin:0; border:0; " width="100%"></iframe></div>
+</div>
+</div>
+<script src="js/sc.js"></script><script>window.onload=menuFix;
+</script><!--执行others下滑菜单function --></body>
+</html>

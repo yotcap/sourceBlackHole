@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sc_VB</title>
+<link rel="stylesheet" href="../css/CSSA.css" type="text/css">
+<link rel="stylesheet" href="../css/child.css" type="text/css">
+<meta charset="utf-8">
+<style type="text/css">
+	.body{
+		height:1300px;}
+	.body2{width:1200px;background:#333;margin: 0 auto;height:1300px;}
+	   /*主身体*/
+	   /*主导航栏*/
+	 .menua{list-style-type:none;width:1194px;height:35px;position:relative;top:30px;border-style:solid; border-top-width:1px;border-bottom-width:1px; border-top-color:#CCC;border-bottom-color:#CCC;border-left-color:#333;border-right-color:#333;}
+	.menua li{float:left;text-align: center;width:170px;height:30px;line-height: 35px;}
+	.menua li a{color:#CCC;text-decoration: none;display:block;}
+	.menua li a:hover{background:#0E0E0E;display:block;color:#FFF;font-size:16.8px;}
+	.Daoh{width:200px;height:800px;position: relative;float:left;left:40px;border-style:solid;border-color:#333;border-width:1px;}<!--侧导航 -->
+	
+</style>
+<script type="text/javascript" src="../js/fanye.js"></script>
+</head>
+
+<body class="body">
+
+<div class="body2"> <!--主身体 -->
+
+	<div style="width:1200px;height:150px;"><a href="../index.html"><img src="../pic/logol.jpg" class="logo"></a>  
+    
+    <iframe src="shiyan.html" width="1000px" style="border:0px;" height="150px">
+    </iframe>
+   
+     </div> 
+ 
+	<div> <!--导航栏 -->
+   	  <ul class="menua">
+      		<li><a href="../index.html">Home</a></li>
+			<li><a href="c.html">C/C++</a></li>
+            <li><a href="VB.html" style="color:#333; background-color:#666;">VB</a></li>
+			<li><a href="Java.html">Java</a></li>
+			<li><a href="Android.html">Android</a></li>
+			<li><a href="Python.html">Python</a></li>
+            <li><a href="#">Others</a>	  </li></ul>
+    </div>
+    
+    
+    
+    <div class="page"> 
+    <div class="Daoh"> <!--侧导航栏 -->
+    <iframe src="../menu/VBmenu.html" width="220px" height="800px">
+    </iframe>
+ 	</div>
+	<div class="bgpic"><!--内容页 -->
+    	<iframe id="rame" src="../program/VB/HTML/1.html" width="800px" height="800px">
+        </iframe>
+        <div class="fan">
+<input type="button"  style="height:30px; float:left;" value="上一页" onclick="Jian()" />
+
+<div class="Ul">
+    <ul id="ul1">
+  <li>10</li><li>20</li><li>30</li><li>40</li> <li>50</li>
+<li>60</li><li>70</li><li>80</li> <li>90</li><li>100</li> 
+    </ul>
+</div>
+<input type="button" style="height:30px; float:left;" value="下一页" onclick="Jia()" />
+
+</div>
+
+</div>        
+</div>
+      <iframe src="../root.html" width="1200px" height="150px" style="border:0px;margin: 0 auto;  position:relative; top:200px;"></iframe>
+    </div>
+ 
+              
+</div>
+
+<script>
+ var page=1;
+ 
+ var length=0;
+
+ window.onload=init;
+ function init(){
+	 var rame=document.getElementById("rame");
+	 var ul1=document.getElementById("ul1");
+	 var ali=ul1.getElementsByTagName('li');
+	  for (var i = 0; i < ali.length; i++) {
+			ali[i].onclick=function (){
+				
+				for (var j = 0; j < ali.length; j++)
+				{ali[j].style.background="#333";
+				}
+				this.style.background="#CCC";
+				 
+				page=this.innerHTML;
+				
+				rame.src="../program/VB/HTML/"+page+".html";}
+            	}
+	  }
+ function Jia(){
+	 var rame=document.getElementById("rame");
+	 var ul1=document.getElementById("ul1");
+	 var ali=ul1.getElementsByTagName('li');
+	  
+	 if(page<100){ 
+	 page++;
+	 	 }
+	 else{
+		 page=100;		 
+		 }
+		 for (var i = 0; i < ali.length; i++) {
+				 ali[i].style.background="#333";
+				 }
+			  rame.src="../program/VB/HTML/"+page+".html";
+ }
+ function Jian(){
+	 rame=document.getElementById("rame");
+	 var ul1=document.getElementById("ul1");
+	 var ali=ul1.getElementsByTagName('li');
+	 if(page>1){
+	 page--;
+	 }
+	 else{
+		 page=1; 
+		 }
+	for (var i = 0; i < ali.length; i++) {
+			ali[i].style.background="#333";				 
+	}
+	  rame.src="../program/VB/HTML/"+page+".html";
+ }
+</script>
+</body>
+</html>

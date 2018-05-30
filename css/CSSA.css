@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0px;padding:0px;}/*body顶格*/
+.body {background-color: #999;}
+.body1{
+	width: 1200px;
+	height: auto;
+	margin: 0 auto;
+	color: #D6D6D6;
+}
+.bodyl{width:600px;background:#333;float:left;height:2400px;}
+.bodyr{width:600px;background:#CCC;float:right;height:2400px;}
+.logo{width:150px;height:150px;}
+.logor{width:150px;height:150px;float:right;}
+	
+.DD{    /*  滚动条/图片转换   */
+	width: 900px;
+	height: 150px;
+	/*background-image:url(../pic/index.jpg);*/
+	position: relative;
+	left: 150px;
+	z-index: 5;
+}
+#Box{
+	position:absolute;z-index: 999;top:0;
+	width:900px;
+	height:150px;
+	margin:0px auto;
+	}
+/*左导航*/
+.menu{list-style-type:none;height:35px;position:relative;top:30px;border-style:solid; border-top-width:1px;border-bottom-width:1px; border-top-color:#CCC;border-bottom-color:#CCC;border-left-color:#333;border-right-color:#333;}
+/*.menu li{float:left;text-align: center;width:99px;height:30px;line-height: 35px;}*/
+/*.menu li a{color:#CCC;text-decoration: none;}*/
+/*.menu li a:hover{background:#0E0E0E;display:block;color:#FFF;font-size:16.8px;}*/
+/*右导航*/
+.menur{list-style-type:none;height:35px;position:relative;top:30px;border-style:solid; border-top-width:1px;border-bottom-width:1px;border-top-color:#333;border-bottom-color:#333;border-left-color:#CCC;border-right-color:#CCC;float:right;}
+/*.menur li{float:left;text-align: center;width:99px;height:30px;line-height: 35px;}
+.menur li a{color:#333;text-decoration: none;}
+.menur li a:hover{background:#727272;display:block;color:#FFF;font-size:16.8px;}*/
+/*表格left*/
+.tableC{width:500px;height:250px;background:url(../pic/tabbg.jpg);position:relative;top:100px;margin:30px 40px 60px;float:left;}
+.tip{
+	background: #CCC;
+	width: 80px;
+	position: relative;
+	top: -20px;
+	border-style: solid;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 0px;
+	text-align: center;
+	height: 20px;
+}
+.tip a{color:#333;}
+.table_box{position:relative;top:0px;}
+/*表格right*/
+.tableCr{width:500px;height:250px;background:url(../pic/tabbgr.jpg);position:relative;top:100px;margin:30px 40px 60px;float:right;}
+.tipr{background:#333;width:80px;position:relative;top:-19px;border-style:solid; border-top-width:1px;border-top-color:#333;border-left-width:1px;border-left-color:#333;border-right-width:1px;border-right-color:#333;border-bottom-width:0px;text-align: center;}
+.tipr a{color:#ccc;}
+
+/*others下滑菜单*/
+	#Drop{
+		padding:12px;
+		display:none;
+		width:100px;
+		text-align:center;	
+		position:absolute;
+		top:30px;
+		right:0px;
+		
+				}
+	#DropRight{
+		padding:12px;
+		display:none;
+		width:100px;
+		text-align:center;
+		color:#333;
+	position:absolute;
+		top:30px;
+		right:0px;
+		
+		}
+/*下滑菜单*/
+#s1{;}
+#s1 ul li{
+  float:left;text-align: center;width:99px;height:30px;line-height: 35px;
+}
+#s1 ul li a{color:#CCC;text-decoration: none;}
+#s1 ul li a:hover{background:#0E0E0E;display:block;color:#FFF;font-size:16.8px;}
+#s1 ul li ul{
+  display:none;
+  position:absolute;
+  text-align: center;
+}
+#s1 ul li:HOVER ul{
+    display:block;
+	margin:0px;
+    padding:0px;
+    /* width:100px; */
+}#s1 ul li.sfhover ul { 
+  display:block;
+  margin:0px;
+  padding:0px;
+  }
+#s1 ul li ul li{
+	position:relative;left:5px;
+	list-style-type:none;
+   border:1px solid #CCC;
+   float:none;
+   margin:0px;
+   width:90px;
+} 
+#s2{;}
+#s2 ul li{
+  float:left;text-align: center;width:99px;height:30px;line-height: 35px;
+}
+#s2 ul li a{color:#333;text-decoration: none;}
+#s2 ul li a:hover{background:#727272;display:block;color:#FFF;font-size:16.8px;}
+#s2 ul li ul{
+  display:none;
+  position:absolute;
+  text-align: center;
+}
+#s2 ul li:HOVER ul{
+    display:block;
+	margin:0px;
+    padding:0px;
+	background:#CCC;
+    /* width:100px; */
+}#s2 ul li.sfhover ul { 
+  display:block;
+  margin:0px;
+  padding:0px;
+  }
+#s2 ul li ul li{
+	position:relative;
+	list-style-type:none;
+   border:1px solid #333;
+   float:none;
+   margin:0px;
+   width:95px;
+} 
+.fan{
+	width:810px;
+	height:30px;}
+.Ul{
+	float:left;
+	width:400px;	
+	}
+.Ul ul{
+	width:400px;
+	height:30px;}
+	
+.Ul ul li{
+	list-style:none;
+	width:38px;
+	text-align:center;
+	line-height:28px;
+	border:1px solid #000;
+	float:left;
+	}
+/*下滑菜单部分 置顶*/
+.t_top{
+position:relative; z-index:99;}
